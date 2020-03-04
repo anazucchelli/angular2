@@ -1,0 +1,32 @@
+---------Terminal
+ng new RDCrud
+cd RDCrud
+ng serve -o
+ng g c components/nav
+ng g c components/home
+ng g c components/sobre
+ng g c components/contato
+
+---------nav.component.html
+<nav>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Sobre</a></li>
+        <li><a href="">Contato</a></li>
+        
+    </ul>
+
+</nav>
+
+--------app.component.html
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+
+
+---------App-Routing.Module.ts
+const routes: Routes = [
+  {
+    path:"",
+    component:HomeComponent
+  }
+];
